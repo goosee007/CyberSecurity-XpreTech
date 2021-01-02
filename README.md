@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - _TODO: Enter the playbook file._  *(use a relative link to the folder within github, look at markdown for relative link to add here)
 
 This document contains the following details:
 - Description of the Topologu
@@ -29,7 +29,9 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_. 
+
+*(go to site, use the table and type in the values in the table then click on generate to create table and overwrite the existing one here: )* 
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -48,7 +50,7 @@ Only the _____ machine can accept connections from the Internet. Access to this 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
-A summary of the access policies in place can be found in the table below.
+A summary of the access policies in place can be found in the table below.  (*use the table generate for this one as well)
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
@@ -83,7 +85,7 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:
+SSH into the control node and follow the steps below: *(List steps for one of the playbooks -->this is giving somebody else instructions in how to set up their install of ELK/Metricbeat/filebeat)...*
 - Copy the _____ file to _____.
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
