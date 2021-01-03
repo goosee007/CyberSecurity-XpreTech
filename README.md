@@ -2,14 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Elk Stack](https://github.com/goosee007/CyberSecurity-XpreTech/tree/main/Images/Proj_Wk13_CloudELK.png)
+![TODO: https://github.com/goosee007/CyberSecurity-XpreTech/tree/main/Images](Images/diagram_filename.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._  *(use a relative link to the folder within github, look at markdown for relative link to add here)
+  - _TODO: Enter the playbook file._
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -29,16 +29,15 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_. 
+_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-*(go to site, use the table and type in the values in the table then click on generate to create table and overwrite the existing one here: )* 
-
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name     | Function   | IP Address | Operating System |
+|----------|------------|------------|------------------|
+| Jump Box | Gateway    | 10.0.0.4   | Linux            |
+| Web-1    | Web Server | 10.0.0.5   | Linux            |
+| Web-2    | Web Server | 10.0.0.6   | Linux            |
+| Web-3    | Web Server | 10.0.0.9   | Linux            |
+| ELK      | Web Server | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
@@ -50,13 +49,15 @@ Only the _____ machine can accept connections from the Internet. Access to this 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
-A summary of the access policies in place can be found in the table below.  (*use the table generate for this one as well)
+A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name     | Publicly  Accessible | Allowed IP Addresses |
+|----------|----------------------|----------------------|
+| Jump Box |        Yes/No        |       10.0.0.4       |
+| Web-1    |          No          |       10.0.0.5       |
+| Web-2    |          No          |       10.0.0.6       |
+| Web-3    |          No          |       10.0.0.9       |
+| ELK      |          No          |       10.1.0.4       |
 
 ### Elk Configuration
 
@@ -85,7 +86,7 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below: *(List steps for one of the playbooks -->this is giving somebody else instructions in how to set up their install of ELK/Metricbeat/filebeat)...*
+SSH into the control node and follow the steps below:
 - Copy the _____ file to _____.
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
