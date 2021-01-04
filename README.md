@@ -32,22 +32,22 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-+----------+-----------------+------------+------------------+
-| Name     | Function        | IP Address | Operating System |
-+----------+-----------------+------------+------------------+
-| Jump Box |     Gateway     |  10.0.0.4  |       Linux      |
-+----------+-----------------+------------+------------------+
-| Web-1    |   DVWA Server   |  10.0.0.5  |       Linux      |
-|          | (Load Balancer) |            |                  |
-+----------+-----------------+------------+------------------+
-| Web-2    |   DVWA Server   |  10.0.0.6  |       Linux      |
-|          | (Load Balancer) |            |                  |
-+----------+-----------------+------------+------------------+
-| Web-3    |   DVWA Server   |  10.0.0.9  |       Linux      |
-|          | (Load Balancer) |            |                  |
-+----------+-----------------+------------+------------------+
-| ELK      |  KIBANA Server  |  10.1.0.4  |       Linux      |
-+----------+-----------------+------------+------------------+
++----------+---------------+------------+------------------+
+| Name     | Function      | IP Address | Operating System |
++----------+---------------+------------+------------------+
+| Jump Box |    Gateway    | 10.0.0.4   |       Linux      |
++----------+---------------+------------+------------------+
+| Web-1    |  DVWA Server  | 10.0.0.5   |       Linux      |
+|          | Load Balancer |            |                  |
++----------+---------------+------------+------------------+
+| Web-2    |  DVWA Server  | 10.0.0.6   |       Linux      |
+|          | Load Balancer |            |                  |
++----------+---------------+------------+------------------+
+| Web-3    |  DVWA Server  | 10.0.0.9   |       Linux      |
+|          | Load Balancer |            |                  |
++----------+---------------+------------+------------------+
+| ELK      | Kibana Server | 10.1.0.4   |       Linux      |
++----------+---------------+------------+------------------+
 
 ### Access Policies
 
