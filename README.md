@@ -32,13 +32,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-|   Name   |           Function           | IP Address | Operating System | Application |
-|:--------:|:----------------------------:|:----------:|:----------------:|:-----------:|
-| Jump Box |            Gateway           |  10.0.0.4  |       Linux      |    Apache   |
-|   Web-1  |  Web Server<br>Load Balancer |  10.0.0.5  |       Linux      |     DVWA    |
-|   Web-2  |  Web Server<br>Load Balancer |  10.0.0.6  |       Linux      |     DVWA    |
-|   Web-3  |  Web Server<br>Load Balancer |  10.0.0.9  |       Linux      |     DVWA    |
-|    ELK   | Web Server <br>Load Balancer |  10.1.0.4  |       Linux      |    Kibana   |
+|   Name   |           Function          | IP Address | Operating System | Application |
+|:--------:|:---------------------------:|:----------:|:----------------:|:-----------:|
+| Jump Box |           Gateway           |  10.0.0.4  |       Linux      |    Apache   |
+| Web-1    | Web Server<br>Load Balancer |  10.0.0.5  |       Linux      |     DVWA    |
+| Web-2    | Web Server<br>Load Balancer |  10.0.0.6  |       Linux      |     DVWA    |
+| Web-3    | Web Server<br>Load Balancer |  10.0.0.9  |       Linux      |     DVWA    |
+| ELK      |         Web Server          |  10.1.0.4  |       Linux      |    Kibana   |
 
 ### Access Policies
 
