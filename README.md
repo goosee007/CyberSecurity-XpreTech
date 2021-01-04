@@ -38,13 +38,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Jump Box |    Gateway    | 10.0.0.4   |       Linux      |
 +----------+---------------+------------+------------------+
 | Web-1    |  DVWA Server  | 10.0.0.5   |       Linux      |
-|          | Load Balancer |            |                  |
 +----------+---------------+------------+------------------+
 | Web-2    |  DVWA Server  | 10.0.0.6   |       Linux      |
-|          | Load Balancer |            |                  |
 +----------+---------------+------------+------------------+
 | Web-3    |  DVWA Server  | 10.0.0.9   |       Linux      |
-|          | Load Balancer |            |                  |
 +----------+---------------+------------+------------------+
 | ELK      | Kibana Server | 10.1.0.4   |       Linux      |
 +----------+---------------+------------+------------------+
