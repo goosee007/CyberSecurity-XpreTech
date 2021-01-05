@@ -54,15 +54,15 @@ The configuration details of each machine may be found below.
 | Web-3    | Web Server<br>Load Balancer |  10.0.0.9  |       Linux      |     DVWA    |
 | ELK      |         Web Server          |  10.1.0.4  |       Linux      |    Kibana   |
 
-_Note: The[Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) is used to add/remove values from the table_.
+_Note: The [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) is used to add/remove values from the table_.
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access SSH to this machine is only allowed from the following IP addresses:
-- _whitelisted IP addresses_  
-	- Public IP: 137.116.191.67 
+- _Whitelisted IP addresses:_  
+	- Public IP address: 	137.116.191.67 
 
 Machines within the network can only be accessed by Jump Box via ansible container using its private IP address 10.0.0.4. 
 
