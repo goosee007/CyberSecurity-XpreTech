@@ -44,7 +44,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 		- Redis, etc
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 |   Name   |           Function          | IP Address | Operating System | Application |
 |:--------:|:---------------------------:|:----------:|:----------------:|:-----------:|
@@ -54,15 +54,17 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-3    | Web Server<br>Load Balancer |  10.0.0.9  |       Linux      |     DVWA    |
 | ELK      |         Web Server          |  10.1.0.4  |       Linux      |    Kibana   |
 
+_Note: The[Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) is used to add/remove values from the table_.
+
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump Box machine can accept connections from the Internet. Access ____ to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_  137.116.191.67 
+Only the Jump Box machine can accept connections from the Internet. Access SSH to this machine is only allowed from the following IP addresses:
+- _whitelisted IP addresses_  
+	- Public IP: 137.116.191.67 
 
-Machines within the network can only be accessed by Jump Box.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by Jump Box via ansible container using its private IP address 10.0.0.4. 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -73,6 +75,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-2     |          No          |       10.0.0.4       |
 | Web-3     |          No          |       10.0.0.4       |
 | ELK       |          No          |       10.0.0.4       |
+
 
 ### Elk Configuration
 
