@@ -87,8 +87,8 @@ The playbook implements the following tasks:
 - ... Install docker image docker.io, this will install docker image
 - ... Install python image python3-pip, this is to install python image 
 - ... Install docker module, this will install the docker container
-- ... Increase 
-- ... Publish ports, 5601, 5044, 9200, this will configure connection ports.
+- ... Increase memory allocation, this will configure memory allocation
+- ... Download and launch a docker elk container and publish ports, install elk container and configure connection ports
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
