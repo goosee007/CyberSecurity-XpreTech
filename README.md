@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: [ELK install yaml file](https://media.githubusercontent.com/media/goosee007/CyberSecurity-XpreTech/main/Ansible/ELK/install-elk.yml?token=ADA4W4VOSZR5VC7UDNX4XQK76UWIW)
+  - [Filebeat playbook file](https://media.githubusercontent.com/media/goosee007/CyberSecurity-XpreTech/main/Ansible/Filebeat/filebeat-playbook.yml?token=ADA4W4SQNMM4IUEWYSYZVHC76U4ZA)
 
 This document contains the following details:
 - Description of the Topology
