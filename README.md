@@ -2,12 +2,12 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: ELK Stack](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Proj_Wk13_CloudELK.PNG)
+![ELK Stack](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Proj_Wk13_CloudELK.PNG "ELK Stack")
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - [Filebeat playbook file](https://media.githubusercontent.com/media/goosee007/CyberSecurity-XpreTech/main/Ansible/Filebeat/filebeat-playbook.yml?token=ADA4W4SQNMM4IUEWYSYZVHC76U4ZA)
+  - [ELK playbook file](https://media.githubusercontent.com/media/goosee007/CyberSecurity-XpreTech/main/Ansible/ELK/install-elk.yml?token=ADA4W4QGTPKMGLL42DEBGS2762DPG)
 
 This document contains the following details:
 - Description of the Topology
@@ -61,8 +61,16 @@ _Note: The [Markdown Table Generator](http://www.tablesgenerator.com/markdown_ta
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access SSH to this machine is only allowed from the following IP addresses:
-- _Whitelisted IP addresses:_  
+- _Whitelisted IP addresses:_   
 	- Public IP address: 	137.116.191.67 
+*(summarize firewall rules for this section, can also add screenshots for ELK & Redteam, noting which public IPs for ELK, DVWA accessiblility via rules)
+
+RedTeam NSG Firewall rules:
+![RedTeam_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/RedTeam_NSG_Rules.PNG "Redteam NSG")
+
+ELK NSG Firewall rules: 
+![ELK_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/ELK_NSG%20Rules.PNG "ELK NSG")
+
 
 Machines within the network can only be accessed by Jump Box via ansible container using its private IP address 10.0.0.4. 
 
@@ -115,7 +123,7 @@ We have installed the following Beats on these machines:
 | Web-3      | -Metricbeat<br>-Filebeat                            |
 
 
-These Beats allow us to collect the following information from each machine:
+These Beats allow us to collect the following information from each machine:  
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ![Example of Syslog](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Filebeat_System%20Syslog%20dashboard%20ECS.png)
@@ -124,7 +132,7 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:
+SSH into the control node and follow the steps below:   (USE THE ANSIBLE YAML FILES FOR THIS PORTION)
 - Copy the _____ file to _____.
 - Update the hosts _____ file to include...____
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
