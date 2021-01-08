@@ -130,14 +130,15 @@ We have installed the following Beats on these machines:
 | Web-3      | -Metricbeat<br>-Filebeat                            |
 
 
-Beats is an open platform lightweight data shippers of all kinds of data that sends the data from many machines and systems to
-Logstash or Elasticsearch. 
+Beats is an open platform lightweight data shipper of all kinds of data and sends the data from many machines and systems to Logstash or Elasticsearch. 
 
 These Beats allow us to collect the following information from each machine:  
 - _For example: the kind of data each beat collects and what you would expect to see, to name a couple of them here,
 E.g.,
 `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
 `Filebeat System` collects Syslog logs files, syslogs are designed to monitor network devices and systems._ 
+
 ![Example of Syslog Dashboard](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Filebeat_System%20Syslog%20dashboard%20ECS.png "Syslog Dashboard")
 
 
