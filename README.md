@@ -23,17 +23,21 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+
 - _What aspect of security do load balancers protect?_
 	- Load balancers off-loading functionality has the potential to deflect DDOS attacks. 
 	- Shift attack traffic from corporate servers to public cloud providers.
+
 - _What is the advantage of a jump box?_
     - Advantages: is that it allows admins to minimize attacks surface thus making an attack harder. 
 	- Is an hardened and monitored device that provides a controlled means of access between two dissimilar security zones.
 		
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file logs and system metrics traffic.
+
 - *What does Filebeat watch for?*
     - Filebeat is designed to watch for and ship log files and forwards the data to Elasticsearch for indexing.
 	- It's actually a logging agent that is installed on a server that is generating log files. 
+
 - *What does Metricbeat record?*
 	- Metricbeat monitors and collects statics and metrics from the servers' system and services running on that server. 
 	- Monitors the standard cpu/memory/disk/network metric data, also records:
@@ -56,6 +60,7 @@ The configuration details of each machine may be found below.
 
 _Note: The [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) is used to add/remove values from the table_.
 
+
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
@@ -70,6 +75,7 @@ RedTeam NSG Firewall rules:
 
 ELK NSG Firewall rules: 
 ![ELK_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/ELK_NSG%20Rules.PNG "ELK NSG")
+
 
 
 Machines within the network can only be accessed by Jump Box via ansible container using its private IP address 10.0.0.4. 
@@ -102,6 +108,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ![ELK Docker ps output](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/ELK_Output.png)
 
+
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
@@ -123,10 +130,15 @@ We have installed the following Beats on these machines:
 | Web-3      | -Metricbeat<br>-Filebeat                            |
 
 
-These Beats allow us to collect the following information from each machine:  
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+Beats is an open platform lightweight data shippers of all kinds of data that sends the data from many machines and systems to
+Logstash or Elasticsearch. 
 
-![Example of Syslog](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Filebeat_System%20Syslog%20dashboard%20ECS.png)
+These Beats allow us to collect the following information from each machine:  
+- _For example: the kind of data each beat collects and what you would expect to see, to name a couple of them here,
+E.g.,
+`Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+`Filebeat System` collects Syslog logs files, syslogs are designed to monitor network devices and systems._ 
+![Example of Syslog Dashboard](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Filebeat_System%20Syslog%20dashboard%20ECS.png "Syslog Dashboard")
 
 
 ### Using the Playbook
@@ -142,5 +154,5 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running? ***The public IP of the elk server
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-
+_As a **Bonus**, some specific commands that you will need to run to download the playbook, update the files, etc._
+1. ` `
