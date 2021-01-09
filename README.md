@@ -79,16 +79,18 @@ ELK NSG Firewall rules:
 
 
 Machines within the network can only be accessed by Jump Box via ansible container using its private IP address 10.0.0.4. 
+Access to the DVWA web site is through the Load Balancers by public IP address 13.64.143.93.
+Access to the Kibana web site is through the resource group firewall public IP address 13.90.43.141 on port 5601. 
 
 A summary of the access policies in place can be found in the table below.
 
-| Name_test | Publicly  Accessible | Allowed IP Addresses |
-|-----------|----------------------|----------------------|
-| Jump Box  |          Yes         |    137.116.191.67    |
-| Web-1     |          No          |       10.0.0.4       |
-| Web-2     |          No          |       10.0.0.4       |
-| Web-3     |          No          |       10.0.0.4       |
-| ELK       |          No          |       10.0.0.4       |
+| Name     | Publicly <br>Accessible | Allowed IP<br>Addresses | Ports |
+|----------|-------------------------|:-----------------------:|-------|
+| Jump Box |           Yes           |      137.116.191.67     |   22  |
+| Web-1    |           Yes           |       13.64.143.93      |   80  |
+| Web-2    |           Yes           |       13.64.143.93      |   80  |
+| Web-3    |           Yes           |       13.64.143.93      |   80  |
+| ELK      |           Yes           |       13.90.43.141      |  5601 |
 
 
 ### Elk Configuration
@@ -137,7 +139,7 @@ These Beats allow us to collect the following information from each machine:
 E.g.,
 `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
-`Filebeat System` collects Syslog logs files, syslogs are designed to monitor network devices and systems._ 
+`Filebeat System` collects Syslog logs files, syslogs are designed to monitor network devices and systems.
 
 ![Example of Syslog Dashboard](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Filebeat_System%20Syslog%20dashboard%20ECS.png "Syslog Dashboard")
 
