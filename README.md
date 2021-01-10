@@ -65,7 +65,7 @@ _Note: The [Markdown Table Generator](http://www.tablesgenerator.com/markdown_ta
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump Box machine can accept connections from the Internet. Access SSH to this machine is only allowed from the following IP addresses:
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _Whitelisted IP addresses:_   
 	- Public IP address: 	137.116.191.67 
 *(summarize firewall rules for this section, can also add screenshots for ELK & Redteam, noting which public IPs for ELK, DVWA accessiblility via rules)
@@ -77,10 +77,9 @@ ELK NSG Firewall rules:
 ![ELK_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/ELK_NSG%20Rules.PNG "ELK NSG")
 
 
-
 Machines within the network can only be accessed by Jump Box via ansible container using its private IP address 10.0.0.4. 
-Access to the DVWA web site is through the Load Balancers by public IP address 13.64.143.93.
-Access to the Kibana web site is through the resource group firewall public IP address 13.90.43.141 on port 5601. 
+<br>Access to the DVWA web site is through the Load Balancers by navigating to the public IP address 13.64.143.93.
+<br>Access to the Kibana web site is through the resource group firewall and navigate to the public IP address 13.90.43.141 on port 5601. 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -124,19 +123,20 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 
-| Monitoring | Beat Service                                        |
-|------------|-----------------------------------------------------|
-| Jump Box   | -Metricbeat: Apache Metric<br>-Filebeat: Apache log |
-| Web-1      | -Metricbeat<br>-Filebeat                            |
-| Web-2      | -Metricbeat<br>-Filebeat                            |
-| Web-3      | -Metricbeat<br>-Filebeat                            |
-
+| Monitoring<br>Name |                     Beat<br>Service                     |
+|:------------------:|:-------------------------------------------------------:|
+| Jump Box           | -Metricbeat: Apache Metric<br>-Filebeat:   Apache log   |
+| Web-1              | -Metricbeat: Docker Metrics<br>-Filebeat:   System Logs |
+| Web-2              | -Metricbeat: Docker Metrics<br>-Filebeat:   System Logs |
+| Web-3              | -Metricbeat: Docker Metrics<br>-Filebeat:   System Logs |
+| ELK                | -Metricbeat: Docker Metrics<br>-Filebeat:   System Logs |
 
 Beats is an open platform lightweight data shipper of all kinds of data and sends the data from many machines and systems to Logstash or Elasticsearch. 
 
-These Beats allow us to collect the following information from each machine:  
+Beats allow us to collect the following information from each machine:  
 - _For example: the kind of data each beat collects and what you would expect to see, to name a couple of them here,
 E.g.,
+
 `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 `Filebeat System` collects Syslog logs files, syslogs are designed to monitor network devices and systems.
@@ -148,14 +148,25 @@ E.g.,
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:   (USE THE ANSIBLE YAML FILES FOR THIS PORTION)
-- Copy the _____ file to _____.
-- Update the hosts _____ file to include...____
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the /etc/ansible/filebeat-config.yml file to the WebVM's where filebeat was installed and copied to /etc/filebeat/filebeat.yml
+- Update the hosts in the hosts file to include the IP Addresses of the VM machine where the filebeat will be installed.
+Specify the internal IP address: 
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running? ***The public IP of the elk server
+E.g.,  10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
-_As a **Bonus**, some specific commands that you will need to run to download the playbook, update the files, etc._
-1. ` `
+- Run the playbook, and navigate to the Filebeat installation page on the ELK server <public IP address:5601> GUI to check that the installation worked as expected.
+
+_**Bonus**, some specific commands that you will need to run to download the playbook, update the files, etc._
+
+To download filebeat configuration file:
+`curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml`
+
+To run the playbook file, use the following commands:
+- `ansible-playbook filebeat-playbook.yml`  
+To verify the playbook: 
+- `ansible-playbook --syntax-check`
+To check the status and start filebeat and metric services:
+- `service filebeat status`
+- `service filebeat start`
+- `service metricbeat status`
+- `service metricbeat start`
