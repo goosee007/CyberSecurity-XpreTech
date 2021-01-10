@@ -163,8 +163,10 @@ To download filebeat configuration file:
 
 To run the playbook file, use the following commands:
 - `ansible-playbook filebeat-playbook.yml`  
+
 To verify the playbook: 
 - `ansible-playbook --syntax-check`
+
 To check the status and start filebeat and metric services:
 - `service filebeat status`
 - `service filebeat start`
