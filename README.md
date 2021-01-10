@@ -147,7 +147,7 @@ E.g.,
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:   (USE THE ANSIBLE YAML FILES FOR THIS PORTION)
+SSH into the control node and follow the steps below:   
 - Copy the /etc/ansible/filebeat-config.yml file to the WebVM's where filebeat was installed and copied to /etc/filebeat/filebeat.yml
 - Update the hosts in the hosts file to include the IP Addresses of the VM machine where the filebeat will be installed.
 Specify the internal IP address: 
