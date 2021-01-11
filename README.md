@@ -70,10 +70,10 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 	- Public IP address: 	137.116.191.67 
 *(summarize firewall rules for this section, can also add screenshots for ELK & Redteam, noting which public IPs for ELK, DVWA accessiblility via rules)
 
-###RedTeam NSG Firewall rules:
+### RedTeam NSG Firewall rules:
 ![RedTeam_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/RedTeam_NSG_Rules.PNG "Redteam NSG")
 
-###ELK NSG Firewall rules: 
+### ELK NSG Firewall rules: 
 ![ELK_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/ELK_NSG%20Rules.PNG "ELK NSG")
 
 
