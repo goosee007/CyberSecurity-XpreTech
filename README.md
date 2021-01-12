@@ -67,9 +67,9 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _Whitelisted IP addresses:_   
-	- Public IP address: 	137.116.191.67 
-	                         13.64.143.93
-							 13.90.43.141
+	- IP address: 	137.116.191.67 
+	                13.64.143.93
+					13.90.43.141
 
 ### RedTeam NSG Firewall rules:
 ![RedTeam_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/RedTeam_NSG_Rules.PNG "Redteam NSG")
