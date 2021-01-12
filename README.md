@@ -58,7 +58,7 @@ The configuration details of each machine may be found below.
 | Web-3    | Web Server<br>Load Balancer |  10.0.0.9  |       Linux      |     DVWA    |
 | ELK      |         Web Server          |  10.1.0.4  |       Linux      |    Kibana   |
 
-_Note: The [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) is used to add/remove values from the table_.
+_Note: The [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) was used to add/remove values from the table_.
 
 
 ### Access Policies
@@ -66,7 +66,7 @@ _Note: The [Markdown Table Generator](http://www.tablesgenerator.com/markdown_ta
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _Whitelisted IP addresses:_   
+- _Whitelist IP addresses:_   
 	-  137.116.191.67 <br>
 	   13.64.143.93   <br>
 	   13.90.43.141
