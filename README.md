@@ -99,7 +99,8 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 of its simplicity and being Agentless...
 
 The playbook implements the following tasks:  
-- _The steps of the ELK installation play:_
+
+_The steps of the ELK installation play:_
 - ... Install docker image docker.io, this will install docker image
 - ... Install python image python3-pip, this is to install python image 
 - ... Install docker module, this will install the docker container
