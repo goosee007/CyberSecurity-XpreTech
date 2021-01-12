@@ -137,11 +137,12 @@ Beats is an open platform lightweight data shipper of all kinds of data and send
 
 Beats allow us to collect the following information from each machine:  
 - _For example: the kind of data each beat collects and what you would expect to see, to name a couple of them here,
-E.g.,
+E.g.,_ 
 
-`Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-
-`Filebeat System` collects Syslog logs files, syslogs are designed to monitor network devices and systems.
+	- `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
+    - `Metricbeat` collects metrics from systems and services. From CPU to memory, Redis to Nginx, etc. 
+	- `Apachebeat` periodically fetches metrics and system logs from the Apache HTTPD servers. 
+	- `Filebeat System Logs` collects Syslog logs data, syslogs are designed to monitor network devices and systems.
 
 ![Example of Syslog Dashboard](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/Filebeat_System%20Syslog%20dashboard%20ECS.png "Syslog Dashboard")
 
