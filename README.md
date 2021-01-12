@@ -73,10 +73,11 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 
 ### RedTeam NSG Firewall rules:
 ![RedTeam_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/RedTeam_NSG_Rules.PNG "Redteam NSG")
+##### Click to enlarge
 
 ### ELK NSG Firewall rules: 
 ![ELK_NSG](https://github.com/goosee007/CyberSecurity-XpreTech/blob/main/Images/ELK_NSG%20Rules.PNG "ELK NSG")
-
+##### Click to enlarge
 
 Machines within the network can only be accessed by Jump Box via ansible container using its private IP address 10.0.0.4. 
 <br>Access to the DVWA web site is through the Load Balancers by navigating to the public IP address 13.64.143.93.
